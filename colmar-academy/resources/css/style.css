@@ -1,0 +1,570 @@
+
+
+html{
+  font-size: 16px;
+  font-family: 'EB Garamond', serif;
+}
+
+.container {
+  position: relative;
+  top: 4rem; /* To offset for fixed header. */
+  max-width: 100vw;
+  /*margin: 0 auto;*/
+  overflow: hidden;
+  margin-right: 0rem;
+}
+
+h4{
+  font-family: 'Lobster', Serif;
+  font-size: 1.5rem;
+}
+
+a{
+  transition-property: font-size;
+  transition-duration: 0.75s;
+}
+
+a:hover{
+  font-size: 1.5rem;
+}
+
+/* -- HEADER -- */
+
+header {
+  position: fixed;
+  width: 100vw;
+  border-bottom: solid 1px #c6c1c1;
+  background-color: white;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+header .logo {
+  flex: 1;
+}
+
+header .logo strong{
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+header .logo span{
+  font-family: 'Cormorant Garamond', serif;
+  color: #667380;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  padding-right: 2.0rem;
+}
+
+nav a {
+  vertical-align: bottom;
+  text-decoration: none;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+header .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+  header .desktop {
+    display: none;
+  }
+
+  header .mobile {
+    display: block;
+    width: 100vw;
+    height: 2rem;
+    /*padding: 1.5rem;*/
+    margin: 1.5rem auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+}
+
+/* -- BANNER -- */
+
+.banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c6c1c1;
+  padding: 2.0rem 1.5rem;
+}
+.banner .image-container{
+  width: 60%;
+  /*height: 100px;*/
+  overflow: hidden;
+}
+
+.banner .image-container img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner .content{
+  margin-left: 2.5rem;
+  width: 40%;
+}
+
+.banner .content h1{
+  font-family: 'Lobster', serif;
+  font-size: 2.5rem;
+}
+
+.banner p{
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+}
+
+.banner .button {
+  background-color: #4a4a4a;
+  color: white;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.banner .button a{
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (max-width: 760px) {
+
+  .banner .desktop {
+    display: none;
+  }
+
+  .banner .content{
+    margin-top: 15.25rem;
+    padding: 2.0rem 1.0rem;
+    width: 100vw;
+  }
+
+  .banner .content p{
+    padding-top: 2.0rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .banner .button {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    margin-right: 2rem;
+  }
+
+}
+
+  /* -- INFO -- */
+
+.info{
+  display: flex;
+  margin-left: -1.5rem;
+}
+
+.info .main{
+  width: 60%;
+  margin: 2rem 1.5rem;
+}
+
+.info .main .image-container{
+  width: 100%;
+  overflow: hidden;
+}
+
+.info .main .image-container img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info .main .content h2{
+  margin-top: 2.0rem;
+  font-family: 'lobster', serif;
+  font-size: 2.2rem;
+}
+
+.info .main .content p{
+  padding-top: 1.5rem;
+  padding-bottom: 2.0rem;
+}
+
+.info .main .content h6{
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+
+.info .right-column{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 1.0rem 1.0rem;
+}
+
+.info .right-column .mobile{
+  display: none;
+}
+
+.info .right-column .image-container .mobile{
+  display: none;
+}
+
+.info .right-column .right-item{
+  display: flex;
+  max-height: 33%;
+  align-items: center;
+  padding: 1.0rem;
+}
+
+.info .right-column .image-container{
+  width: 32%;
+  overflow: hidden;
+}
+
+.info .right-column .image-container img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media only screen and (max-width: 1000px){
+
+  #lecture .image-container{
+    height: 100%;
+    /*width: 60%;*/
+    overflow: visible;
+    flex-shrink: 0.2;
+  }
+
+  #lecture .image-container img{
+    /*max-width: 100%;
+    height: auto;*/
+    max-height: 100%;
+    width: auto;
+    display: block;
+  }
+
+}
+
+.info .right-column .right-item:last-child{
+  background-color: #c6c1c1;
+}
+
+.info .right-column .content{
+  padding-left: 2.0rem;
+}
+
+#lecture .image-container{
+  /*height: 100%;*/
+  width: 35%;
+  overflow: visible;
+  flex-shrink: 0.2;
+}
+
+.info .right-column .content p{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.info .right-column .content a{
+  text-decoration: none;
+  color: navy;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  transition-property: font-size;
+  transition-duration: 0.75s;
+}
+
+.info .right-column .content a:hover{
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 760px){
+
+  .info .desktop{
+    display: none;
+  }
+
+  .info .right-item{
+    display: block;
+    margin: 1rem;
+    width: 100vw;
+    flex-direction: column;
+  }
+
+  .info .right-column .mobile .image-container{
+    width: 100vw;
+    /*height: ;*/
+    overflow: hidden;
+  }
+
+  .info .right-item .desktop{
+    display: none;
+  }
+
+  .info .right-item .mobile{
+    display: block;
+    width: 100vw;
+  }
+
+  .info .right-column .content{
+    padding-left: 1rem;
+    width: 100vw;
+    padding-top: 2.0rem;
+  }
+
+  .info .right-column .right-item:last-child{
+    background-color: white;
+    /*padding-left: -1.0rem;*/
+  }
+
+}
+
+/* -- COURSE -- */
+
+.course{
+  background-color: #c6c1c1;
+  margin: 2.0rem auto;
+  /*margin-left: -0.5rem;*/
+  padding-left: 0.5rem;
+
+}
+
+.course h3{
+  text-align: center;
+  margin: 2.0rem auto;
+  font-family: 'Lobster', Serif;
+  font-size: 1.75rem;
+}
+
+.course .table{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+}
+
+.course .table .square{
+  width: 30%;
+  height: 25rem;
+  margin: 0rem 1rem 2rem 1rem;
+  background-color: white;
+}
+
+.course .table .square .image-container{
+  width: 100%;
+  /*height: 6rem;*/
+  overflow: hidden;
+}
+
+.course .table .square .image-container img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.course .table .square .content{
+  text-align: left;
+  padding: 1.0rem;
+  padding-bottom: 2.0rem;
+}
+
+.course .table .square .content p{
+  padding: 0.5rem 0;
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.course .table .square .content p:first-child{
+  font-style: italic;
+}
+
+@media only screen and (max-width: 1000px){
+
+  .course{
+    margin: 1rem auto;
+    padding-left: 2rem;
+  }
+
+  .course .table .square{
+    width: 30%;
+    height: 20rem;
+    margin: 0rem 0.5rem 1rem 0.5rem;
+    background-color: white;
+  }
+
+}
+
+@media only screen and (max-width: 760px){
+
+  .course{
+    background-color: white;
+  }
+
+  .course .desktop{
+    display: none;
+  }
+
+  .course .table{
+    display: block;
+  }
+
+  .course .table .image-container{
+    display: none;
+  }
+
+  .course .table .square{
+    width: 100vw;
+    height: 3.0rem;
+    background-color: #c6c1c1;
+    margin: 0.25rem 1.5rem;
+    margin-right: 2.0rem;
+    margin-left: -1.0rem;
+  }
+
+  .course .table .square .content{
+    padding: 1.0rem;
+    margin-right: 2.0rem;
+  }
+
+}
+
+/* -- THESIS -- */
+
+.thesis{
+  padding: 2.0rem 1.5rem;
+}
+
+.thesis h3{
+  padding-bottom: 2.0rem;
+  text-align: center;
+  font-family: 'Lobster', serif;
+  font-size: 1.75rem;
+}
+
+.thesis .table{
+  display: flex;
+}
+
+.thesis .main{
+  width: 60%;
+}
+
+.video-container{
+  width: 100%;
+}
+
+.video-container video{
+  max-width: 100%;
+  height: auto;
+}
+
+.thesis .main .content{
+  padding-top: 1.5rem;
+  padding-bottom: 2.0rem;
+}
+
+.thesis .main .content p{
+  padding-top: 1.0rem;
+  line-height: 1.5rem;
+}
+
+.thesis .right-column{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.thesis .right-column .right-item{
+  height: 10.4rem;
+  margin: 0 0.5rem 1.0rem 1.0rem;
+  display: flex;
+  width: 100%;
+}
+
+.thesis .right-column .right-item:first-child{
+  background-color: #c6c1c1;
+}
+
+.thesis .right-column .image-container{
+  width: 35%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.thesis .right-column .image-container img{
+  width: auto;
+  max-height: 100%;
+  display: block;
+}
+
+.thesis .right-column .right-item .content{
+  padding: 2.0rem 2.0rem 2.0rem 1.0rem;
+}
+
+.thesis .right-column .right-item .content p{
+  padding-top: 1.0rem;
+  line-height: 1.5rem;
+}
+
+@media only screen and (max-width: 760px){
+
+  .thesis .desktop{
+    display: none;
+  }
+
+  .thesis .main{
+    width: 100%;
+  }
+
+}
+
+/* -- FOOTER --  */
+
+footer{
+  position: relative;
+  top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem 3.0rem 1.5rem;
+  border-top: 0.1rem solid #c6c1c1;
+}
+
+footer p{
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+
+footer nav a{
+  text-decoration: none;
+}
+
+footer nav span:first-child{
+  padding-right: 1rem;
+}
+
+@media only screen and (max-width: 760px){
+
+  footer .desktop{
+    display: none;
+  }
+
+}
